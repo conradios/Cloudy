@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cloudy"
+version = "0.6.0"
+description = "Cloudy: tu propia nube, en tu compu. Copia local, gratuita y verificada de fotos y videos del iPhone."
+license = "MIT"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["pymobiledevice3>=11.50", "PySide6>=6.7", "pyicloud>=2026.10", "pillow-heif>=1.0", "imageio-ffmpeg>=0.6", "psutil>=5.9", "comtypes>=1.4; sys_platform == 'win32'"]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[project.gui-scripts]
+cloudy = "iphone_vault.ui.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

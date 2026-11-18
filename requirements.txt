@@ -1,0 +1,15 @@
+# Librerias de Python (las instala pip).
+# Android: en Windows va por MTP (comtypes, sin instalar nada en el celular). En Mac/Linux, o para la
+# verificacion extra en el celular, se usa ADB ("platform-tools" oficial de Google), que se instala aparte
+# y solo si el usuario lo acepta.
+# iTunes (driver USB de Apple, necesario en Windows) NO se instala con pip:
+# lo instala automaticamente "Iniciar Cloudy.bat" si falta (winget o instalador oficial de Apple).
+# Los codecs gratuitos para ver HEIC/HEVC en Windows (HEIF Image Extensions + HEVC Video Extensions
+# from Device Manufacturer) tampoco son de pip: tambien los instala "Iniciar Cloudy.bat".
+pymobiledevice3>=11.50
+PySide6>=6.7
+pyicloud>=2026.10
+pillow-heif>=1.0      # opcional: copias JPG de las fotos HEIC
+imageio-ffmpeg>=0.6   # opcional: trae ffmpeg para copias MP4 de los videos HEVC
+psutil>=5.9           # espacio y formato del disco, deteccion del hotspot
+comtypes>=1.4; sys_platform == "win32"   # Android y camaras por cable en Windows (MTP, API oficial de Windows)

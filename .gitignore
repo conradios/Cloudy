@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+build/
+dist/
+
+# Datos locales de Cloudy (nunca se suben: son de cada usuario)
+.vault/
+*.part
+diagnostico_iphone_vault.json
+diagnostico_cloudy.json
+stress/results*.json
+
+# Sistema
+.DS_Store
+Thumbs.db
+desktop.ini
